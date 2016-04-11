@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.6'
 
-gem "ImageMagick"
+#gem "ImageMagick", "6.9.3-7"
 gem "paperclip", "~> 4.3"
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
