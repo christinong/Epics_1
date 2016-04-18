@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
+<<<<<<< HEAD
 	<div class="col-md-6">
 		<div class="thumbnail">
 			<%= image_tag @listing.image.url %>
@@ -15,5 +16,21 @@
 
 <% if current_user == @listing.user %>
 	<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> |
+=======
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @listing.image.url %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h3><%= @listing.name %></h3>
+    <p><%= number_to_currency@listing.price %></p>
+    <p><%= @listing.description %></p>
+  </div>
+</div>
+
+<% if current_user == @listing.user %>
+  <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-link" %> |
+>>>>>>> 3ab3f1cf5fbfe3fb8f0dda728f6ccb666c0881c7
 <% end %>
 <%= link_to 'Back', listings_path, class: "btn btn-link" %>

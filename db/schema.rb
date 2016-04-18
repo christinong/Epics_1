@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160407130919) do
+=======
+ActiveRecord::Schema.define(version: 20160411230708) do
+>>>>>>> 3ab3f1cf5fbfe3fb8f0dda728f6ccb666c0881c7
 
   create_table "listings", force: :cascade do |t|
     t.string   "name"
@@ -23,9 +27,25 @@ ActiveRecord::Schema.define(version: 20160407130919) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+<<<<<<< HEAD
     t.integer  "user_id"
   end
 
+=======
+    t.string   "image"
+    t.integer  "user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "rating"
+    t.text     "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "listing_id"
+  end
+
+>>>>>>> 3ab3f1cf5fbfe3fb8f0dda728f6ccb666c0881c7
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
