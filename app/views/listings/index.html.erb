@@ -1,6 +1,7 @@
 <div class="jumbotron">
-  <h1>Vote, Post, & Build.</h1>
-  <h2>Have a project or desire to be more involved in the community?</h2>
+  <h1>Post. Vote. Build. Serve.</h1>
+  <h2>Have a project impacting our community?</h2>
+  <h2>Would you like to develop & apply your Engineering skills to help your community?</h2>
   <h2>Get involved with EPICS at Texas A&M University!</h2
 </div>
 </div>
@@ -13,7 +14,7 @@
         <%=link_to image_tag(listing.image.url), listing %>
         <div class="caption">
           <h3><%= listing.name %></h3>
-          <p><%= number_to_currency(listing.price) %></p>
+          <p>Students Needed:<%= listing.price %></p>
           <p><%= "Proposed by #{listing.user.name}" %></p>
         </div>
       </div>
