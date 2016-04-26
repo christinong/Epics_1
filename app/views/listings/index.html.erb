@@ -1,9 +1,11 @@
 
 <div class="jumbotron color">
   <h1>Post. Vote. Build. Serve.</h1>
+  <br>
+  <br>
   <h2>Have a project impacting our community?</h2>
   <h2>Would you like to develop & apply your Engineering skills to help your community?</h2>
-  <h2>Get involved with EPICS at Texas A&M University!</h2
+  <h2>Get involved with EPICS at Texas A&M University!</h2>
 </div>
 </div>
 
@@ -12,7 +14,6 @@
     <% @listings.each do |listing| %>
      <div class="col-md-3">
       <div class="thumbnail">
-        <%=link_to image_tag(listing.image.url), listing %>
         <div class="caption">
           <h3><%= listing.name %></h3>
           <p>Students Needed:<%= listing.price %></p>
