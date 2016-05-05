@@ -6,7 +6,7 @@
           <%= link_to image_tag(listing.image.url), listing %>
           <div class="caption">
             <h3><%= listing.name %></h3>
-            <p><%= number_to_currency(listing.price) %></p>
+            <p><%= Integer(listing.price) %></p>
             <p><%= "Sold by #{listing.user.name}" %></p>
             <% if (user_signed_in?) && (current_user == listing.user) %>
               <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
@@ -24,7 +24,7 @@
     <th class="center">Image</th>
     <th class="ceneter">Name</th>
     <th class="center">Description</th>
-    <th class="center">Price</th>
+    <th class="center">Number of Students</th>
     <th class="center">Action</th>
   </tr>
 
@@ -33,7 +33,7 @@
       <td><%= image_tag listing.image.url(:thumb) %></td>
       <td><%= listing.name %></td>
       <td><%= listing.description %></td>
-      <td><%= number_to_currency(listing.price) %></td>
+      <td><%= Integer(listing.price) %></td>
       <td>
         <div class="btn-group">
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
